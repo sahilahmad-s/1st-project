@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Prompt Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Prompt Generator</h1>
+
+    <!-- API Key Input -->
+    <label for="apikey">🔑 Enter your Gemini API Key:</label>
+    <input type="text" id="apikey" placeholder="Paste your Gemini API key here..." required />
+
+    <form id="promptForm">
+      <label for="category">📂 Choose your category:</label>
+      <select id="category" required>
+        <option value="">-- Select --</option>
+        <option value="Web Developer">Web Developer</option>
+        <option value="Content Creator">Content Creator</option>
+        <option value="Marketer">Marketer</option>
+        <option value="Designer">Designer</option>
+      </select>
+
+      <label for="description">📝 Describe your task or project:</label>
+      <textarea id="description" rows="4" required placeholder="e.g. Build a responsive clothing store website with cart, filters, and SEO..."></textarea>
+
+      <button type="submit">🚀 Generate Prompt</button>
+    </form>
+
+    <div class="result">
+      <h2>🎯 Complete Prompt</h2>
+      <pre id="output">Your final AI prompt will appear here...</pre>
+      <button id="copyBtn">📋 Copy Prompt</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
